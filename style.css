@@ -1,0 +1,70 @@
+/* General reset and styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: black;
+  color: white;
+  font-family: monospace, monospace;
+}
+
+/* Center content vertically and horizontally */
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Hide elements with this class */
+.hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  margin-bottom: 0.3rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.instruction {
+  margin-top: 2rem;
+  font-style: italic;
+  animation: blink 1s steps(2, start) infinite;
+  user-select: none;
+}
+
+ul {
+  max-width: 700px;
+  text-align: left;
+  line-height: 1.5;
+  padding-left: 20px;
+}
+
+/* Blink animation for the instruction text */
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* Horizontal line styling */
+hr {
+  width: 80%;
+  border: 1px solid white;
+  margin: 30px 0;
+}
