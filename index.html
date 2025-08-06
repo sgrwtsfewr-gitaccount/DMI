@@ -7,12 +7,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- ENTRY SCREEN -->
   <div id="entry-screen" class="center-screen">
     <h1>DIRECTORATE OF MILITARY INTELLIGENCE</h1>
     <p>PUBLIC RELEASE</p>
-    <p class="instruction">PRESS ENTER TO CONTINUE</p>
+    <p class="instruction">PRESS ENTER OR TAP TO CONTINUE</p>
+    <button id="enter-btn">ENTER</button>
   </div>
 
+  <!-- MAIN CONTENT -->
   <div id="main-content" class="hidden center-screen">
     <h2>Welcome to the Public Access Terminal</h2>
     <p>This is the Directorate's information repository. Access is monitored.</p>
@@ -30,12 +33,18 @@
   </div>
 
   <script>
+    function enterSite() {
+      document.getElementById("entry-screen").classList.add("hidden");
+      document.getElementById("main-content").classList.remove("hidden");
+    }
+
     document.addEventListener("keydown", (event) => {
       if (event.key === "Enter") {
-        document.getElementById("entry-screen").classList.add("hidden");
-        document.getElementById("main-content").classList.remove("hidden");
+        enterSite();
       }
     });
+
+    document.getElementById("enter-btn").addEventListener("click", enterSite);
   </script>
 </body>
 </html>
